@@ -208,7 +208,7 @@ declare -a SYSTEM_SERVICES=(
     'com.apple.backupd-helper'
     'com.apple.telnetd'
     
-    # Media and Device Services
+    # Media and Device Services (non-essential)
     'com.apple.amp.mediasharingd'
     'com.apple.mediaremoteagent'
     'com.apple.java.InstallOnDemand'
@@ -275,8 +275,9 @@ print_essential_services() {
     echo "- com.apple.apsd (Basic push notifications)"
     echo "- com.apple.secd (Keychain security)"
     echo "- com.apple.identityservicesd (Basic system authentication)"
-    echo "- com.apple.audio.* (Audio functionality)"
-    echo "- com.apple.coreaudiod (Core Audio)"
+    echo "- com.apple.audio.coreaudiod (Core Audio)"
+    echo "- com.apple.audio.AudioComponentRegistrar (Audio components)"
+    echo "- com.apple.audio.systemsoundserverd (System sounds)"
 }
 
 # Print Spotlight alternatives
